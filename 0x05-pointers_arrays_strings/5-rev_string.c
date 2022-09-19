@@ -1,42 +1,34 @@
 #include <stdio.h>
 
+#include <string.h>
+
 #include "main.h"
 
 
 
 /**
 
- * puts2 - prints every other character
+*print_rev - Prints a string in reverse order
 
- * @str: string
+*@s: String to reverse
 
- *
+*Return: Nothing
 
- * Return: nothing
-
- */
+*/
 
 
 
-void puts2(char *str)
+void print_rev(char *s)
 
 {
 
-	int i = 0;
+	int len = strlen(s);
 
 
 
-	while (*(str + i) != '\0')
+	while (len--)
 
-	{
-
-		if (i % 2 == 0)
-
-			putchar(*(str + i));
-
-		i++;
-
-	}
+		putchar(*(s + len));
 
 	putchar(10);
 
