@@ -1,47 +1,31 @@
-#include <stdio.h>
-
 #include "main.h"
 
 
 
 /**
 
-* print_array - prints n element of array
+ * main - check the code
 
-* @a: array
+ *
 
-* @n: number of elements
+ * Return: Always 0.
 
-* Return: nothing
-
-*/
+ */
 
 
 
-void print_array(int *a, int n)
+void puts_half(char *str);int main(void)
 
 {
 
-	int inc;
+    char *str;
 
 
 
-	for (inc = 0; inc < n ; inc++)
+    str = "0123456789";
 
-	{
+    puts_half(str);
 
-		if (inc != n - 1)
-
-			printf("%d, ", a[inc]);
-
-		else
-
-			printf("%d", a[inc]);
-
-
-
-	}
-
-	putchar(10);
+    return (0);
 
 }
