@@ -1,45 +1,71 @@
-#include <stdio.h>
+#include "main.h"
 
 
 
-int main(void)
+/**
+
+ * print_number - prints an integer.
+
+ * @n: input integer.
+
+ * Return: no return.
+
+ */
+
+void print_number(int n)
 
 {
 
-  int n;
-
-  int a[5];
-
-  int *p;
+	unsigned int m, d, count;
 
 
 
-  a[2] = 1024;
+	if (n < 0)
 
-  p = &n;
+	{
 
-  /*
+		_putchar(45);
 
-   * write your line of code here...
+		m = n * -1;
 
-   * Remember:
+	}
 
-   * - you are not allowed to use a
+	else
 
-   * - you are not allowed to modify p
+	{
 
-   * - only one statement
+		m = n;
 
-   * - you are not allowed to code anything else than this line of code
+	}
 
-   */
 
-  *(p + 5) = 98;
 
-  /* ...so that this prints 98\n */
+	d = m;
 
-  printf("a[2] = %d\n", a[2]);
+	count = 1;
 
-  return (0);
+
+
+	while (d > 9)
+
+	{
+
+		d /= 10;
+
+		count *= 10;
+
+	}
+
+
+
+	for (; count >= 1; count /= 10)
+
+	{
+
+		_putchar(((m / count) % 10) + 48);
+
+	}
 
 }
+
+
